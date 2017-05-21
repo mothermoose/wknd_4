@@ -2,4 +2,6 @@
 # As an example, if haystack = [:hay, :needle, :hay], you'd pull it out with:
 # haystack[1]
 
-haystack = {hay: [:hay, :hay, :hay, {hay: {hay: [:hay, {hay: [:hay, :hay, :needle]}, :hay, :hay, :hay]}}, :hay, :hay]}
+haystack = {hay: [:hay, :hay, :hay, {hay: {hay: [:hay, {hay: [:hay, :hay, :needle]}, :hay, :hay, :hay]}}, :hay, :hay]} 
+
+puts haystack[:hay][4][:hay][:hay][1][:hay][2]

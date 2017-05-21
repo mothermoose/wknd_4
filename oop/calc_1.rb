@@ -14,47 +14,46 @@
 
 class SimpleCalculator
 
-  def add(first_number, second_number)
+  def self.add(first_number, second_number)
     first_number + second_number
   end
 
-  def subtract(first_number, second_number)
+  def self.subtract(first_number, second_number)
     first_number - second_number
   end
 
-  def multiply(first_number, second_number)
+  def self.multiply(first_number, second_number)
     first_number * second_number
   end
 
-  def divide(first_number, second_number)
+  def self.divide(first_number, second_number)
     first_number / second_number
   end
 
 end
 
-class FancyCalculator
+class FancyCalculator < SimpleCalculator
 
-  def add(first_number, second_number)
-    first_number + second_number
-  end
-
-  def subtract(first_number, second_number)
-    first_number - second_number
-  end
-
-  def multiply(first_number, second_number)
-    first_number * second_number
-  end
-
-  def divide(first_number, second_number)
-    first_number / second_number
-  end
-
-  def square_root(number)
+  def self.square_root(number)
     Math.sqrt(number)
   end
 
 end
 
-# Write your own driver code below:
+# Wrputs "TESTING find_missing_letter..."
+puts "Testing SimpleCalculator"
+
+result = FancyCalculator.multiply(2,6)
+
+puts "Your method returned:"
+puts result
+puts
+
+if result == "12"
+  puts "PASS!"
+else
+  puts "F"
+end 
+
+
 

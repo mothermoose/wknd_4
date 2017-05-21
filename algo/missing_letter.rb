@@ -3,7 +3,12 @@
 # bonus: returns a string of all missing letters as a string. ex: find_missing_letter("ace") would return "bd", write your own test.
 
 def find_missing_letter(range)
-
+  alphabet = [] #find a way to put the alphabet in
+  range.each_char do |i|
+    puts i # to check if the above line works
+    if 
+  end
+  #go through all the letters in the alphabet and compare to the range given.  
 end
 
 # Driver code - don't touch anything below this line.
