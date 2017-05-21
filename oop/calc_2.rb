@@ -3,7 +3,11 @@
 # a different technique using Composition. Hint: Google 'Ruby Mixin Module'. (Using
 # mixin modules is how you achieve Composition with Ruby.)
 
-module SimpleCalculator
+class SimpleCalculator
+  attr_accessor :first_number, :second_number
+end 
+
+module Simple
 
   def add(first_number, second_number)
     first_number + second_number
@@ -25,7 +29,7 @@ end
 
 class FancyCalculator
 
-  include SimpleCalculator
+  include Simple
 
   def square_root(number)
     Math.sqrt(number)
